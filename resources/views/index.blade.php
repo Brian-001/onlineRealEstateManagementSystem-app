@@ -9,519 +9,501 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
-        <!-- Styles -->
-        <style>
-            /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}a{background-color:transparent}[hidden]{display:none}html{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}*,:after,:before{box-sizing:border-box;border:0 solid #e2e8f0}a{color:inherit;text-decoration:inherit}svg,video{display:block;vertical-align:middle}video{max-width:100%;height:auto}.bg-white{--bg-opacity:1;background-color:#fff;background-color:rgba(255,255,255,var(--bg-opacity))}.bg-gray-100{--bg-opacity:1;background-color:#f7fafc;background-color:rgba(247,250,252,var(--bg-opacity))}.border-gray-200{--border-opacity:1;border-color:#edf2f7;border-color:rgba(237,242,247,var(--border-opacity))}.border-t{border-top-width:1px}.flex{display:flex}.grid{display:grid}.hidden{display:none}.items-center{align-items:center}.justify-center{justify-content:center}.font-semibold{font-weight:600}.h-5{height:1.25rem}.h-8{height:2rem}.h-16{height:4rem}.text-sm{font-size:.875rem}.text-lg{font-size:1.125rem}.leading-7{line-height:1.75rem}.mx-auto{margin-left:auto;margin-right:auto}.ml-1{margin-left:.25rem}.mt-2{margin-top:.5rem}.mr-2{margin-right:.5rem}.ml-2{margin-left:.5rem}.mt-4{margin-top:1rem}.ml-4{margin-left:1rem}.mt-8{margin-top:2rem}.ml-12{margin-left:3rem}.-mt-px{margin-top:-1px}.max-w-6xl{max-width:72rem}.min-h-screen{min-height:100vh}.overflow-hidden{overflow:hidden}.p-6{padding:1.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.pt-8{padding-top:2rem}.fixed{position:fixed}.relative{position:relative}.top-0{top:0}.right-0{right:0}.shadow{box-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06)}.text-center{text-align:center}.text-gray-200{--text-opacity:1;color:#edf2f7;color:rgba(237,242,247,var(--text-opacity))}.text-gray-300{--text-opacity:1;color:#e2e8f0;color:rgba(226,232,240,var(--text-opacity))}.text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.text-gray-500{--text-opacity:1;color:#a0aec0;color:rgba(160,174,192,var(--text-opacity))}.text-gray-600{--text-opacity:1;color:#718096;color:rgba(113,128,150,var(--text-opacity))}.text-gray-700{--text-opacity:1;color:#4a5568;color:rgba(74,85,104,var(--text-opacity))}.text-gray-900{--text-opacity:1;color:#1a202c;color:rgba(26,32,44,var(--text-opacity))}.underline{text-decoration:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.w-5{width:1.25rem}.w-8{width:2rem}.w-auto{width:auto}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}@media (min-width:640px){.sm\:rounded-lg{border-radius:.5rem}.sm\:block{display:block}.sm\:items-center{align-items:center}.sm\:justify-start{justify-content:flex-start}.sm\:justify-between{justify-content:space-between}.sm\:h-20{height:5rem}.sm\:ml-0{margin-left:0}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:pt-0{padding-top:0}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width:768px){.md\:border-t-0{border-top-width:0}.md\:border-l{border-left-width:1px}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (min-width:1024px){.lg\:px-8{padding-left:2rem;padding-right:2rem}}@media (prefers-color-scheme:dark){.dark\:bg-gray-800{--bg-opacity:1;background-color:#2d3748;background-color:rgba(45,55,72,var(--bg-opacity))}.dark\:bg-gray-900{--bg-opacity:1;background-color:#1a202c;background-color:rgba(26,32,44,var(--bg-opacity))}.dark\:border-gray-700{--border-opacity:1;border-color:#4a5568;border-color:rgba(74,85,104,var(--border-opacity))}.dark\:text-white{--text-opacity:1;color:#fff;color:rgba(255,255,255,var(--text-opacity))}.dark\:text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.dark\:text-gray-500{--tw-text-opacity:1;color:#6b7280;color:rgba(107,114,128,var(--tw-text-opacity))}}
-             body{
-                 background-color: #ffffff;
-             }
-             .flex{
-                 display:flex;
-             }
-             .flex-row{
-                 flex-wrap: wrap;
-             }
-             .p-4{
-                 padding: 2rem;
-             }
-             nav a{
-                 display:inline-block;
-                 font-weight: bold;
-                 color: #000000;
-                 border-radius: 0.5rem; /* equals to 8px*/
-                 padding:0.75rem;
-                 margin: 1rem;
-                 background-color:#ffffff;
-                 filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
-             }
-             #search-navbar{
-                 padding: 0.75rem;
-                 
-             }
-             input[type=text]{
-                 float:right;
-                 /*border: 0.125rem solid #761f17;*/
-                 border-radius: 1.5rem;
-                 width:30%;
-                 background-color:#ffffff;
-                 outline: none;
-                 filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
-                 color:#000000;
-             }
-             .n-container{
-                max-width: 90%;
-                margin: 0 auto;
-                
-                
-             }
-             .m-cont{
-              
-                padding: 20px;
-             }
-             .flex{
-               
-                display: flex;
-                flex-wrap: wrap;
-            }
-            .side-menu{
-                
-                width: 40%;
-                height:max-content;
-                background: #fff;
-                /*border: 1px solid green;*/
-                box-shadow: 1px 2px 2px 1px rgba(0, 0, 0);
-                border-radius: 0.75rem;
-            }
-            .item-holder{
-                /*margin: 2rem;*/
-                width: 100%;
-                height:auto;
-                background: #fff;
-                /*border: 1px solid rgb(31, 41, 55);*/
-                box-shadow: 1px 2px 2px 1px rgba(0, 0, 0);
-                border-radius: 0.75rem;
-                flex-wrap: wrap;
-                overflow: hidden;
-            }
-            .container{
-                display:flex;
-                flex-wrap: nowrap;
-            }
-            .item1{
-                margin: 20px;
-                height: 250px;
-                padding: 0px;
-                /*border: 1px solid red;*/
-                box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.2);
-                border-radius: 5px;
-            }
-            .item1 img{
-                width: 100%;
-                height: 65%;
-                border-top-left-radius: 5px;
-                border-top-right-radius: 5;
-            }
-            .details {
-                padding: 10px;
-                display: flex;
-                justify-content: space-between;
-                border: 1px solid cyan;
-               
-            }
-            .details .det-1{
-               
-            }
-        </style>
-
-        <link rel="stylesheet" href="{{ url('css/app.css') }}">
+        <link href="{{asset('css/app.css')}}" rel="stylesheet">
         <script src="https://cdn.tailwindcss.com"></script>
+        
     </head>
     <body>
-        <div class="relative flex flex-row p-4">
-            <nav>
-                <a href="#">Home</a>
-                <a href="#">Residential</a>
-                <a href="#">Commercial</a>
-                <a href="#">About</a>
-            </nav>
-        </div>
-        <div class="flex justify-center rounded-md">
-            <input type="text" id="search-navbar" placeholder="Search...">
-        </div>
-            
-        <!--
-        <div class="flex justify-start columns-2 ml-3">
-            <div class="items">
-                <ul>
-                    <li>Item1</li>
-                    <li>Item1</li>
-                    <li>Item1</li>
-                    <li>Item1</li>
-                    <li>Item1</li>
-                </ul>
-            </div>
-            <div class="items">
-                <ul>
-                    <li>Item2</li>
-                    <li>Item2</li>
-                    <li>Item2</li>
-                    <li>Item2</li>
-                    <li>Item2</li>
-                </ul>
-            </div>
-        </div>
-        -->
-        <!--
-        <div class="flex flex-col">
-            <div class="side-menu">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam doloribus temporibus facere ipsum inventore et autem laboriosam deleniti 
-                    suscipit dolorum non, impedit, odit ducimus necessitatibus officia? Maiores nisi totam veritatis.</p>
-            </div>
-        </div>
-        -->
-        <!-- component -->
-       <!--This is an example component -->
-       <div class="n-container">
-            <div class="m-cont flex grow justify-start px-5 py-5">
-
-                <aside class="w-64" aria-label="Sidebar">
-                <div class="px-3 py-4 overflow-y-auto rounded bg-gray-50 dark:bg-gray-800 border-radius: 0.75rem">
-                    <ul class="space-y-2">
-                    <li>
-                        <a href="#"
-                        class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                        <svg class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                            fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path>
-                            <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
-                        </svg>
-                        <span class="ml-3">All</span>
-                        </a>
-                    </li>
-
-                    
-                    <li>
-                        <button type="button" class="flex items-center w-full p-2 text-base font-normal text-blackcolor: rgb(0 0 0)color: rgb(0 0 0)color: rgb(0 0 0)color: rgb(0 0 0)color: rgb(0 0 0) transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-example1" data-collapse-toggle="dropdown-example1">
-                            <svg class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z" clip-rule="evenodd"></path></svg>
-                            <span class="flex-1 ml-3 text-left whitespace-nowrap" sidebar-toggle-item>Commercial</span>
-                            <svg sidebar-toggle-item class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                        </button>
-                        <ul id="dropdown-example1" class="py-2 space-y-2" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            <li>
-                                <a href="#"
-                                    class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 pl-11">Business Stalls</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 pl-11">Warehouses</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 pl-11">Resort Gardens</a>
-                            </li>
-                        </ul>
-                    </li>
-                    
-
-
-                    <!--Residential-->
-                    <li>
-                        <button type="button" class="flex items-center w-full p-2 text-base font-normal text-blackcolor: rgb(0 0 0)color: rgb(0 0 0)color: rgb(0 0 0)color: rgb(0 0 0)color: rgb(0 0 0) transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                            <svg class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z" clip-rule="evenodd"></path></svg>
-                            <span class="flex-1 ml-3 text-left whitespace-nowrap" sidebar-toggle-item>Residential</span>
-                            <svg sidebar-toggle-item class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                        </button>
-                        <ul  id="dropdown-example" class="py-2 space-y-2" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            <li>
-                                <a href="#"
-                                    class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 pl-11">Single houses</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 pl-11">Apartments</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 pl-11">Real Estate</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <!--End Residential-->
-
-                    <!--Commercial
-                    <li>
-                        <button type="button" class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                            <svg class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z" clip-rule="evenodd"></path></svg>
-                            <span class="flex-1 ml-3 text-left whitespace-nowrap" sidebar-toggle-item>Commercial</span>
-                            <svg sidebar-toggle-item class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                        </button>
-                        <ul id="dropdown-example2" class="py-2 space-y-2" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            <li>
-                                <a href="#"
-                                    class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 pl-11">Business Stalls</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 pl-11">Warehouses</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 pl-11">Ceremony Gardens</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 pl-11">Conference Halls</a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    end-->
-                    <li>
-                        <a href="#"
-                        class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                        <svg class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                            fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z">
-                            </path>
-                        </svg>
-                        <span class="flex-1 ml-3 whitespace-nowrap">New arrivals</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#"
-                        class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                        <svg class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                            fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M8.707 7.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l2-2a1 1 0 00-1.414-1.414L11 7.586V3a1 1 0 10-2 0v4.586l-.293-.293z">
-                            </path>
-                            <path
-                                d="M3 5a2 2 0 012-2h1a1 1 0 010 2H5v7h2l1 2h4l1-2h2V5h-1a1 1 0 110-2h1a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5z">
-                            </path>
-                        </svg>
-                        <span class="flex-1 ml-3 whitespace-nowrap">Legal Documents</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#"
-                        class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                        <svg class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                            fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                        <span class="flex-1 ml-3 whitespace-nowrap">Cart</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#"
-                        class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                        <svg class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                            fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                        <span class="flex-1 ml-3 whitespace-nowrap">Support</span>
-                        </a>
-                    </li>
-                    <!--
-                    <li>
-                        <a href="#"
-                        class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                        <svg class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                            fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                        <span class="flex-1 ml-3 whitespace-nowrap">Sign In</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#"
-                        class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                        <svg class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                            fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M5 4a3 3 0 00-3 3v6a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H5zm-1 9v-1h5v2H5a1 1 0 01-1-1zm7 1h4a1 1 0 001-1v-1h-5v2zm0-4h5V8h-5v2zM9 8H4v2h5V8z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                        <span class="flex-1 ml-3 whitespace-nowrap">Sign Up</span>
-                        </a>
-                    </li>
-                    -->
-                </ul>
-                </div>
-                </aside>
-                
-                <!-- Carousel
-                <div id="default-carousel" class="relative" data-carousel="static">
-                    Carousel wrapper 
-                    <div class="overflow-hidden relative h-56 rounded-lg sm:h-64 xl:h-80 2xl:h-96">
-                    Item 1 
-                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                        <span class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800">First Slide</span>
-                        <img src="{{ storage_path('storage/pimages/apartment1.jpg') }}" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
-                    </div>
-                    Item 2
-                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="storage/pimages/apartment1.jpg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
-                    </div>
-                    Item 3
-                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="storage/pimages/apartment1.jpg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
-                    </div>
-                    </div>
-                    Slider indicators 
-                    <div class="flex absolute bottom-5 left-1/2 z-30 space-x-3 -translate-x-1/2">
-                    <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-                    <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-                    <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
-                    </div>
-                    Slider controls
-                    <button type="button" class="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-prev>
-                    <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                    <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-                    <span class="hidden">Previous</span>
-                    </span>
-                    </button>
-                    <button type="button" class="flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-next>
-                    <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                    <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                    <span class="hidden">Next</span>
-                    </span>
-                    </button>
-                </div>
-                end carousel-->
-
-                <div class="flex grow justify-content mx-auto">
-                    <div class="grid grid-cols-3 item-holder">
-                        <!--Card1-->
-                        <div class="item1">
-                            <img src="/pimages/apartment1.jpg" alt="">
-                            <div class=" details">
-                                <div class="det-1">
-                                    <p>Apartment</p>
-                                    <p>3 Bedrooms</p>
-                                </div>
-                                <div class="det-2">
-                                    <p>Kileleshwa</p>
-                                    <p>Ksh 60,000</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--Card2-->
-                        <div class="item1">
-                            <img src="/pimages/apartment2.jpg" alt="">
-                            <div class=" details">
-                                <div class="det-1">
-                                    <p>Name</p>
-                                    <p>Features</p>
-                                </div>
-                                <div class="det-2">
-                                    <p>Location</p>
-                                    <p>Price</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--Card3-->
-                        <div class="item1">
-                            <img src="/pimages/garden1.jpg" alt="">
-                            <div class=" details">
-                                <div class="det-1">
-                                    <p>Name</p>
-                                    <p>Features</p>
-                                </div>
-                                <div class="det-2">
-                                    <p>Location</p>
-                                    <p>Price</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--Card4-->
-                        <div class="item1">
-                            <img src="/pimages/garden2.jpg" alt="">
-                            <div class=" details">
-                                <div class="det-1">
-                                    <p>Name</p>
-                                    <p>Features</p>
-                                </div>
-                                <div class="det-2">
-                                    <p>Location</p>
-                                    <p>Price</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--Card5-->
-                        <div class="item1">
-                            <img src="/pimages/shouse1.jpg" alt="">
-                            <div class=" details">
-                                <div class="det-1">
-                                    <p>Name</p>
-                                    <p>Features</p>
-                                </div>
-                                <div class="det-2">
-                                    <p>Location</p>
-                                    <p>Price</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--Card6-->
-                        <div class="item1">
-                            <img src="/pimages/shouse2.jpg" alt="">
-                            <div class=" details">
-                                <div class="det-1">
-                                    <p>Name</p>
-                                    <p>Features</p>
-                                </div>
-                                <div class="det-2">
-                                    <p>Location</p>
-                                    <p>Price</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--card7-->
-                        <div class="item1">
-                            <img src="/pimages/stall1.jpg" alt="">
-                            <div class=" details">
-                                <div class="det-1">
-                                    <p>Name</p>
-                                    <p>Features</p>
-                                </div>
-                                <div class="det-2">
-                                    <p>Location</p>
-                                    <p>Price</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!--Card8-->
-                        <div class="item1">
-                            <img src="/pimages/warehouse1.jpg" alt="">
-                            <div class=" details">
-                                <div class="det-1">
-                                    <p>Name</p>
-                                    <p>Features</p>
-                                </div>
-                                <div class="det-2">
-                                    <p>Location</p>
-                                    <p>Price</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!--Card9-->
-                        <div class="item1">
-                            <img src="/pimages/warehouse2.jpg" alt="">
-                            <div class=" details">
-                                <div class="det-1">
-                                    <p>Name</p>
-                                    <p>Features</p>
-                                </div>
-                                <div class="det-2">
-                                    <p>Location</p>
-                                    <p>Price</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <script src="https://unpkg.com/flowbite@1.3.4/dist/flowbite.js"></script>
-                </div>
+      <nav class="p-5 bg-white shadow md:flex md:items-center md:justify-between">
+          <div>
+              <span class="text-2xl font-[Poppins] font-medium cursor-pointer">
+                  Real Estate Management System
+              </span>
+          </div>
+      
+          <ul class="md:flex md;items-center z-[-1] md:z-auto md:static absolute bg-white">
+              <li class="mx-4 my-6 md:my-0 ">
+                  <a href="" class="text-xl hover:text-cyan-500 duration-500">Home</a>
+              </li>
+              <li class="mx-4">
+                  <a href="" class="text-xl hover:text-cyan-500 duration-500">Residential</a>
+              </li>
+              <li class="mx-4">
+                  <a href="" class="text-xl hover:text-cyan-500 duration-500">Commercial</a>
+              </li>
+              <li class="mx-4">
+                  <a href="" class="text-xl hover:text-cyan-500 duration-500">About</a>
+              </li>
+          </ul>
+      </nav>
+        
             
        </div>
-        
-        <!--
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-            @yield('content')
+   
         </div>
-        -->
+        <div class="flex flex-col md:flex-row bg-blue-100 text-gray-100 py-4 rounded-xl">
+            <aside class="sidebar rounded-2xl w-1/6 md:shadow transform -translate-x-full
+            md:translate-x-0 transition-transform duration-150 ease-in bg-gray-800">
+
+            <div class="sidebar-header flex items-center justify-center py-4">
+               <div class="inline-flex">
+                 <a href="#" class="inline-flex flex-row items-center">
+                     <svg class="w-10 h-10 text-red-400" fill="currentColor"
+                      viewBox="0 0 20 20"><path fill-rule="evenodd" d="M11.757 2.034a1 1 0 01.638.519c.483.967.844 1.554 1.207 2.03.368.482.756.876 1.348 1.467A6.985 6.985 0 0117 11a7.002 7.002 0 01-14 0c0-1.79.684-3.583 2.05-4.95a1 1 0 011.707.707c0 1.12.07 1.973.398 2.654.18.374.461.74.945 1.067.116-1.061.328-2.354.614-3.58.225-.966.505-1.93.839-2.734.167-.403.356-.785.57-1.116.208-.322.476-.649.822-.88a1 1 0 01.812-.134zm.364 13.087A2.998 2.998 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879.586.585.879 1.353.879 2.121s-.293 1.536-.879 2.121z" clip-rule="evenodd"/>
+                     </svg>
+                     <span class="leading-10 text-gray-100 text-2xl font-bold ml-1 uppercase">Real Estate</span>
+                 </a>
+               </div> 
+            </div>
+
+            <div class="sidebar-content px-4 py-6">
+                <ul class="flex flex-col w-full">
+                    <li class="my-px">
+                        <a href="#" class="flex flex-row items-center justify-center h-10 px-3 rounded-lg text-gray-700 bg-gray-100">
+                            <span class="flex items-center justify-center text-lg text-gray-400">
+                               <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6" >
+                                <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                               </svg>
+                            </span>
+                            <span class="ml-3">All Products</span>
+                        </a>
+                    </li>
+                    <li class="my-px">
+                        
+                        <span class="flex font-medium text-sm text-gray-300 px-4 my-4 uppercase">Commercial 
+                            <span class="flex items-center justify-center text-lg text-gray-400 ">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z" />
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd" />
+                                </svg>
+                            </span>
+                        </span>
+                    </li>
+                    <li class="my-px">
+                        <a href="{{ route('home.resort') }}" class="flex flex-row items-center h-10 px-3 rounded-lg text-gray-300 hover:bg-gray-100 hover:text-gray-700">
+                            <span class="flex items-center justify-center text-lg text-gray-400">
+                                <!--
+                                <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+                                    <path  d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/>
+                                </svg>
+                                -->
+                                
+                            </span>
+                            <span class="ml-3">Resort Gardens</span>
+                        </a>
+                    </li>
+                    <li class="my-px">
+                        <a href="" class="flex flex-row items-center h-10 px-3 rounded-lg text-gray-300 hover:bg-gray-100 hover:text-gray-700">
+                            <span class="flex items-center justify-center text-lg text-gray-400">
+
+                            </span>
+                            <span class="ml-3">Business Stalls</span>
+                        </a>
+                    </li>
+                    <li class="my-px">
+                        <a href="" class="flex flex-row items-center h-10 px-3 rounded-lg text-gray-300 hover:bg-gray-100 hover:text-gray-700">
+                            <span class="flex items-center justify-center text-lg text-gray-400">
+
+                            </span>
+                            <span class="ml-3">Warehouses</span>
+                        </a>
+                    </li>
+                    <li class="my-px">
+                        <a href="" class="flex flex-row items-center h-10 px-3 rounded-lg text-gray-300 hover:bg-gray-100 hover:text-gray-700">
+                            <span class="flex items-center justify-center text-lg text-gray-400">
+
+                            </span>
+                            <span class="ml-3">Office Suite</span>
+                        </a>
+                    </li>
+                    <li class="my-px">
+                        <a href="" class="flex flex-row items-center h-10 px-3 rounded-lg text-gray-300 hover:bg-gray-100 hover:text-gray-700">
+                            <span class="flex items-center justify-center text-lg text-gray-400">
+
+                            </span>
+                            <span class="ml-3">Land</span>
+                        </a>
+                    </li>
+
+                    <!--Residential-->
+                    <li class="my-px">
+                        <span class="flex font-medium text-sm text-gray-300 px-4 my-4 uppercase">Residential
+                            <span class="flex items-center justify-center text-lg text-gray-400 ">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" />
+                                </svg>
+                            </span>
+                        </span>
+                    </li>
+                    <li class="my-px">
+                        <a href="#" class="flex flex-row items-center h-10 px-3 rounded-lg text-gray-300 hover:bg-gray-100 hover:text-gray-700">
+                            <span class="flex items-center justify-center text-lg text-gray-400"> 
+                                <!--
+                                <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+                                    <path  d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/>
+                                </svg>
+                                -->
+                            </span>
+                            <span class="ml-3">Single Houses</span>
+                        </a>
+                    </li>
+                    <li class="my-px">
+                        <a href="" class="flex flex-row items-center h-10 px-3 rounded-lg text-gray-300 hover:bg-gray-100 hover:text-gray-700">
+                            <span class="flex items-center justify-center text-lg text-gray-400">
+
+                            </span>
+                            <span class="ml-3">Gated Community</span>
+                        </a>
+                    </li>
+                    <li class="my-px">
+                        <a href="" class="flex flex-row items-center h-10 px-3 rounded-lg text-gray-300 hover:bg-gray-100 hover:text-gray-700">
+                            <span class="flex items-center justify-center text-lg text-gray-400">
+
+                            </span>
+                            <span class="ml-3">Apartment</span>
+                        </a>
+                    </li>
+                    <li class="my-px">
+                        <a href="" class="flex flex-row items-center h-10 px-3 rounded-lg text-gray-300 hover:bg-gray-100 hover:text-gray-700">
+                            <span class="flex items-center justify-center text-lg text-gray-400">
+
+                            </span>
+                            <span class=" flex ml-3 py-4">Legal Documents
+                                <span class="flex items-center justify-center text-lg text-gray-400">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                        <path d="M9 2a2 2 0 00-2 2v8a2 2 0 002 2h6a2 2 0 002-2V6.414A2 2 0 0016.414 5L14 2.586A2 2 0 0012.586 2H9z" />
+                                        <path d="M3 8a2 2 0 012-2v10h8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z" />
+                                    </svg>
+                                </span>
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="my-px">
+                        <a href="" class="flex flex-row items-center h-10 px-3 rounded-lg text-gray-300 hover:bg-gray-100 hover:text-gray-700">
+                            <span class="flex items-center justify-center text-lg text-gray-400">
+
+                            </span>
+                            <span class=" flex ml-3 py-4">Cart
+                                <span class="flex items-center justify-center text-lg text-gray-400">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                        <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+                                    </svg>
+                                </span>
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="my-px">
+                        <a href="" class="flex flex-row items-center h-10 px-3 rounded-lg text-gray-300 hover:bg-gray-100 hover:text-gray-700">
+                            <span class="flex items-center justify-center text-lg text-gray-400">
+
+                            </span>
+                            <span class=" flex ml-3 py-4">Faqs
+                                <span class="flex items-center justify-center text-lg text-gray-400">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
+                                    </svg>
+                                </span>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            </aside>
+
+            <main class="main flex flex-col h-auto -ml-64 md:ml-0 w-5/6 transition-all duration-150 ease-in">
+                <header class="header bg-white shadow py-4 px-4">
+                  <div class="header-content flex items-center flex-row">
+                    <form action="#">
+                      <div class="hidden md:flex relative">
+                        <div
+                          class="inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400"
+                        >
+                          <svg
+                            class="h-6 w-6"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                          </svg>
+                        </div>
+
+                        <input
+                          id="search"
+                          type="text"
+                          name="search"
+                          class="text-black sm:text-base placeholder-black pl-10 pr-4 rounded-lg border border-gray-300 w-full h-10 focus:outline-none focus:border-indigo-400"
+                          placeholder="Search..."
+                        />
+                      </div>
+                      <div class="flex md:hidden">
+                        <a href="#" class="flex items-center justify-center h-10 w-10 border-transparent">
+                          <svg
+                            class="h-6 w-6 text-gray-500"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                          </svg>
+                        </a>
+                      </div>
+                    </form>
+                    
+                  </div>
+                </header>
+                <div class="main-content flex flex-col p-4">
+                  <h1 class="font-bold text-2xl text-gray-700">Products</h1>
+                  
+
+                  <div class="flex flex-col  border-4 border-gray-400 border-dashed bg-white rounded mt-4">
+                    <div class="flex flex-wrap justify-start text-black h-auto p-5 gap-6">
+                      <div class="pcard p-2 bg-white-200 w-56 h-56 shadow-md">
+                        <img src="/pimages/garden1.jpg" alt="" class="object-cover object-center overflow-hidden">
+                        <div class="grid grid-rows-2 grid-flow-col gap-2 text-xs overflow-hidden">
+                            <p>Name</p>
+                            <p>location</p>
+                            <p>Location</p>
+                            <p>Price</p>
+                        </div>
+                      </div>
+                      <div class="pcard p-2 bg-white-200 w-56 h-56 shadow-md">
+                        <img src="/pimages/stall1.jpg" alt="" class="object-cover object-center overflow-hidden">
+                        <div class="grid grid-rows-2 grid-flow-col gap-2 text-xs overflow-hidden">
+                            <p>Name</p>
+                            <p>location</p>
+                            <p>Location</p>
+                            <p>Price</p>
+                        </div>
+                      </div>
+                      <div class="pcard p-2 bg-white-200 w-56 h-56 shadow-md">
+                        <img src="/pimages/warehouse1.jpg" alt="" class="object-cover object-center overflow-hidden">
+                        <div class="grid grid-rows-2 grid-flow-col gap-2 text-xs overflow-hidden">
+                            <p>Name</p>
+                            <p>location</p>
+                            <p>Location</p>
+                            <p>Price</p>
+                        </div>
+                      </div>
+                      <div class="pcard p-2 bg-white-200 w-56 h-56 shadow-md">
+                        <img src="/pimages/office1.jpg" alt="" class="object-cover object-center overflow-hidden">
+                        <div class="grid grid-rows-2 grid-flow-col gap-2 text-xs overflow-hidden">
+                            <p>Name</p>
+                            <p>location</p>
+                            <p>Location</p>
+                            <p>Price</p>
+                        </div>
+                      </div>
+                      <div class="pcard p-2 bg-white-200 w-56 h-56 shadow-md">
+                        <img src="/pimages/land1.jpg" alt="" class="object-cover object-center overflow-hidden">
+                        <div class="grid grid-rows-2 grid-flow-col gap-2 text-xs overflow-hidden">
+                            <p>Name</p>
+                            <p>location</p>
+                            <p>Location</p>
+                            <p>Price</p>
+                        </div>
+                      </div>
+                      <div class="pcard p-2 bg-white-200 w-56 h-56 shadow-md">
+                        <img src="/pimages/shouse1.jpg" alt="" class="object-cover object-center overflow-hidden">
+                        <div class="grid grid-rows-2 grid-flow-col gap-2 text-xs overflow-hidden">
+                            <p>Name</p>
+                            <p>location</p>
+                            <p>Location</p>
+                            <p>Price</p>
+                        </div>
+                      </div>
+                      <div class="pcard p-2 bg-white-200 w-56 h-56 shadow-md">
+                        <img src="/pimages/restate2.jpg" alt="" class="object-cover object-center overflow-hidden">
+                        <div class="grid grid-rows-2 grid-flow-col gap-2 text-xs overflow-hidden">
+                            <p>Name</p>
+                            <p>location</p>
+                            <p>Location</p>
+                            <p>Price</p>
+                        </div>
+                      </div>
+                      <div class="pcard p-2 bg-white-200 w-56 h-56 shadow-md">
+                        <img src="/pimages/apartment1.jpg" alt="" class="object-cover object-center overflow-hidden">
+                        <div class="grid grid-rows-2 grid-flow-col gap-2 text-xs overflow-hidden">
+                            <p>Name</p>
+                            <p>location</p>
+                            <p>Location</p>
+                            <p>Price</p>
+                        </div>
+                      </div>
+                      <div class="pcard p-2 bg-white-200 w-56 h-56 shadow-md">
+                        <img src="/pimages/garden2.jpg" alt="" class="object-cover object-center overflow-hidden">
+                        <div class="grid grid-rows-2 grid-flow-col gap-2 text-xs overflow-hidden">
+                            <p>Name</p>
+                            <p>location</p>
+                            <p>Location</p>
+                            <p>Price</p>
+                        </div>
+                      </div>
+                      <div class="pcard p-2 bg-white-200 w-56 h-56 shadow-md">
+                        <img src="/pimages/stall2.jpg" alt="" class="object-cover object-center overflow-hidden">
+                        <div class="grid grid-rows-2 grid-flow-col gap-2 text-xs overflow-hidden">
+                            <p>Name</p>
+                            <p>location</p>
+                            <p>Location</p>
+                            <p>Price</p>
+                        </div>
+                      </div>
+                      <div class="pcard p-2 bg-white-200 w-56 h-56 shadow-md">
+                        <img src="/pimages/warehouse2.jpg" alt="" class="object-cover object-center overflow-hidden">
+                        <div class="grid grid-rows-2 grid-flow-col gap-2 text-xs overflow-hidden">
+                            <p>Name</p>
+                            <p>location</p>
+                            <p>Location</p>
+                            <p>Price</p>
+                        </div>
+                      </div>
+                      <div class="pcard p-2 bg-white-200 w-56 h-56 shadow-md">
+                        <img src="/pimages/office2.jpg" alt="" class="object-cover object-center overflow-hidden">
+                        <div class="grid grid-rows-2 grid-flow-col gap-2 text-xs overflow-hidden">
+                            <p>Name</p>
+                            <p>location</p>
+                            <p>Location</p>
+                            <p>Price</p>
+                        </div>
+                      </div>
+                      <div class="pcard p-2 bg-white-200 w-56 h-56 shadow-md">
+                        <img src="/pimages/land2.jpg" alt="" class="object-cover object-center overflow-hidden">
+                        <div class="grid grid-rows-2 grid-flow-col gap-2 text-xs overflow-hidden">
+                            <p>Name</p>
+                            <p>location</p>
+                            <p>Location</p>
+                            <p>Price</p>
+                        </div>
+                      </div>
+                      <div class="pcard p-2 bg-white-200 w-56 h-56 shadow-md">
+                        <img src="/pimages/shouse2.jpg" alt="" class="object-cover object-center overflow-hidden">
+                        <div class="grid grid-rows-2 grid-flow-col gap-2 text-xs overflow-hidden">
+                            <p>Name</p>
+                            <p>location</p>
+                            <p>Location</p>
+                            <p>Price</p>
+                        </div>
+                      </div>
+                      <div class="pcard p-2 bg-white-200 w-56 h-56 shadow-md">
+                        <img src="/pimages/restate2.jpg" alt="" class="object-cover object-center overflow-hidden">
+                        <div class="grid grid-rows-2 grid-flow-col gap-2 text-xs overflow-hidden">
+                            <p>Name</p>
+                            <p>location</p>
+                            <p>Location</p>
+                            <p>Price</p>
+                        </div>
+                      </div>
+                      <div class="pcard p-2 bg-white-200 w-56 h-56 shadow-md">
+                        <img src="/pimages/apartment3.jpg" alt="" class="object-cover object-center overflow-hidden">
+                        <div class="grid grid-rows-2 grid-flow-col gap-2 text-xs overflow-hidden">
+                            <p>Name</p>
+                            <p>location</p>
+                            <p>Location</p>
+                            <p>Price</p>
+                        </div>
+                      </div>
+                      <div class="pcard p-2 bg-white-200 w-56 h-56 shadow-md">
+                        <img src="/pimages/garden3.jpg" alt="" class="object-cover object-center overflow-hidden">
+                        <div class="grid grid-rows-2 grid-flow-col gap-2 text-xs overflow-hidden">
+                            <p>Name</p>
+                            <p>location</p>
+                            <p>Location</p>
+                            <p>Price</p>
+                        </div>
+                      </div>
+                      <div class="pcard p-2 bg-white-200 w-56 h-56 shadow-md">
+                        <img src="/pimages/stall3.jpg" alt="" class="object-cover object-center overflow-hidden">
+                        <div class="grid grid-rows-2 grid-flow-col gap-2 text-xs overflow-hidden">
+                            <p>Name</p>
+                            <p>location</p>
+                            <p>Location</p>
+                            <p>Price</p>
+                        </div>
+                      </div>
+                      <div class="pcard p-2 bg-white-200 w-56 h-56 shadow-md">
+                        <img src="/pimages/warehouse3.jpg" alt="" class="object-cover object-center overflow-hidden">
+                        <div class="grid grid-rows-2 grid-flow-col gap-2 text-xs overflow-hidden">
+                            <p>Name</p>
+                            <p>location</p>
+                            <p>Location</p>
+                            <p>Price</p>
+                        </div>
+                      </div>
+                      <div class="pcard p-2 bg-white-200 w-56 h-56 shadow-md">
+                        <img src="/pimages/office3.jpg" alt="" class="object-cover object-center overflow-hidden">
+                        <div class="grid grid-rows-2 grid-flow-col gap-2 text-xs overflow-hidden">
+                            <p>Name</p>
+                            <p>location</p>
+                            <p>Location</p>
+                            <p>Price</p>
+                        </div>
+                      </div>
+                      <div class="pcard p-2 bg-white-200 w-56 h-56 shadow-md">
+                        <img src="/pimages/land3.jpg" alt="" class="object-cover object-center overflow-hidden">
+                        <div class="grid grid-rows-2 grid-flow-col gap-2 text-xs overflow-hidden">
+                            <p>Name</p>
+                            <p>location</p>
+                            <p>Location</p>
+                            <p>Price</p>
+                        </div>
+                      </div>
+                      <div class="pcard p-2 bg-white-200 w-56 h-56 shadow-md">
+                        <img src="/pimages/shouse3.jpg" alt="" class="object-cover object-center overflow-hidden">
+                        <div class="grid grid-rows-2 grid-flow-col gap-2 text-xs overflow-hidden">
+                            <p>Name</p>
+                            <p>location</p>
+                            <p>Location</p>
+                            <p>Price</p>
+                        </div>
+                      </div>
+                      <div class="pcard p-2 bg-white-200 w-56 h-56 shadow-md">
+                        <img src="/pimages/restate3.jpg" alt="" class="object-cover object-center overflow-hidden">
+                        <div class="grid grid-rows-2 grid-flow-col gap-2 text-xs overflow-hidden">
+                            <p>Name</p>
+                            <p>location</p>
+                            <p>Location</p>
+                            <p>Price</p>
+                        </div>
+                      </div>
+                      <div class="pcard p-2 bg-white-200 w-56 h-56 shadow-md">
+                        <img src="/pimages/apartment4.jpg" alt="" class="object-cover object-center overflow-hidden">
+                        <div class="grid grid-rows-2 grid-flow-col gap-2 text-xs overflow-hidden">
+                            <p>Name</p>
+                            <p>location</p>
+                            <p>Location</p>
+                            <p>Price</p>
+                        </div>
+                      </div>
+                      <div class="pcard p-2 bg-white-200 w-56 h-56 shadow-md">
+                        <img src="/pimages/garden4.jpg" alt="" class="object-cover object-center overflow-hidden">
+                        <div class="grid grid-rows-2 grid-flow-col gap-2 text-xs overflow-hidden">
+                            <p>Name</p>
+                            <p>location</p>
+                            <p>Location</p>
+                            <p>Price</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  
+                </div>
+                <footer class="footer px-4 py-6">
+                  <div class="footer-content">
+                    <p class="text-sm text-gray-600 text-center">&copy;RealEstate 2022. All rights reserved. <a href="https://twitter.com/iaminos">by Brian Kanyi Karanja</a></p>
+                    <script>const currentYear= new Date().getFullYear();
+                </script>
+                  </div>
+                </footer>
+            </main>
+        </div>
     </body>
 </html>

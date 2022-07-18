@@ -1,11 +1,6 @@
-@tailwind base;
-
-@tailwind components;
-
-@tailwind utilities;
-
-
-/*CONTENT&SIDENAV*/
+body{
+    font-family: 'Nunito', sans-serif;
+}
 
 p-4{
     padding: 1 rem;
