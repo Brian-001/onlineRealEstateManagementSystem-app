@@ -81,14 +81,9 @@ class HomeController extends Controller
         $data['products'] = Product::get();
         return view('staffpanel', $data);
     }
-
-
-
-
-    /*Belongs to AdminController
-    /*
-    public function staff(){
-        return view ('super');
+    public function practicefrontend(){
+        return view('practicefrontend');
     }
-    */
+
+   
 }

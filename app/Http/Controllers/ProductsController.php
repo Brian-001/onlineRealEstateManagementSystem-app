@@ -91,7 +91,7 @@ class ProductsController extends Controller
 
         /*Get Data stored in a variable called products*/
 
-        return view('products.show', [
+        return view('product', [
             'product' => $product /* 'product is the key or route parameter and provide data in $products then $index'*/
 
         ]);
