@@ -20,6 +20,10 @@ return new class extends Migration
             $table->string('location');
             $table->string('features');
             $table->string('image_url');
+            $table->string('location');
+            $table->integer('price');
+            $table->string('feautures');
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }
