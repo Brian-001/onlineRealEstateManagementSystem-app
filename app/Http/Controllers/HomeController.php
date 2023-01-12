@@ -58,6 +58,9 @@ class HomeController extends Controller
     public function staffpanel(){
         return view('staffpanel');
     }
+    public function admin(){
+        return view('admin');
+    }
     
     
     

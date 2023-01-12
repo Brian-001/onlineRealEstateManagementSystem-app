@@ -3,7 +3,7 @@
 
 @section('content')
     <div class="h-screen flex items-center justify-center bg-white ">
-        <form  method="" action="">
+        <form  method="POST" action="{{route('image.store')}}" enctype="multipart/form-data">
 
             @csrf
             <div>
@@ -52,7 +52,7 @@
     
             <div class="my-6">
                 <label for="item-photo" class="text-lg font-medium">Item Photo</label>
-                <input type="file" accept=".gif,.jpg,.jpeg,.png,.doc,.docx" class="border-solid border-2 border-black px-8 py-8 rounded-md" name="item-photo" id="item-photo">
+                <input type="file" accept=".gif,.jpg,.jpeg,.png,.doc,.docx" class="border-solid border-2 border-black px-8 py-8 rounded-md" name="image" id="image">
                 @error('image')
                     <div class="text-xs text-red-700 font-bold">
                         {{ $message }}

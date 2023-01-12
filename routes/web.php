@@ -1,9 +1,11 @@
 <?php
 
+use App\Http\Controllers\ImageController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\CustomAuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +32,19 @@ Route::get('/apartment', [HomeController::class, 'apartment'])->name('home.apart
 Route::get('/sellerpanel', [HomeController::class, 'sellerpanel'])->name('home.sellerpanel');
 Route::get('/seller', [HomeController::class, 'seller'])->name('home.seller'); /* Needs to be put under AdminController*/ 
 Route::get('/staffpanel', [HomeController::class, 'staffpanel'])->name('home.staffpanel'); /* Needs to be put under AdminController*/
+Route::get('/admin', [HomeController::class, 'admin'])->name('home.admin');
+
+Route::get('/image', [ImageController::class, 'index'])->name('image.index');
+Route::post('/image', [ImageController::class])->name('image.store');
+
+
+Route::get('dashboard', [CustomAuthController::class, 'dashboard']); 
+Route::get('login', [CustomAuthController::class, 'index'])->name('login');
+Route::post('custom-login', [CustomAuthController::class, 'customLogin'])->name('login.custom'); 
+Route::get('registration', [CustomAuthController::class, 'registration'])->name('register-user');
+Route::post('custom-registration', [CustomAuthController::class, 'customRegistration'])->name('register.custom'); 
+Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');
+
 
 /*All Routes are going to be based on products folder*/
 Route::resource('products', ProductsController::class);
