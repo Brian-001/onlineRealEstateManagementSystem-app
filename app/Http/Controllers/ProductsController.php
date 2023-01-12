@@ -11,15 +11,16 @@ class ProductsController extends Controller
 
 
     /*getdata() returns array of arrays*/
-    private static function getData(){
-        return[
-            ['id' => 1, 'name'=>'Resort Garden', 'category'=>'commercial'],
-            ['id' => 2, 'name'=>'Business stall', 'category'=>'commercial'],
-            ['id'=> 3, 'name'=>'Warehouse', 'category'=>'commercial'],
-            ['id'=> 4, 'name'=>'Office', 'category'=>'commercial'],
-            ['id'=>5, 'name'=>'Land', 'category'=>'commercial'],
-            ['id'=>6, 'name'=>'Single house', 'category'=>'residential'],
-            
+    private static function getData()
+    {
+        return [
+            ['id' => 1, 'name' => 'Resort Garden', 'category' => 'commercial'],
+            ['id' => 2, 'name' => 'Business stall', 'category' => 'commercial'],
+            ['id' => 3, 'name' => 'Warehouse', 'category' => 'commercial'],
+            ['id' => 4, 'name' => 'Office', 'category' => 'commercial'],
+            ['id' => 5, 'name' => 'Land', 'category' => 'commercial'],
+            ['id' => 6, 'name' => 'Single house', 'category' => 'residential'],
+
         ];
     }
     /**
@@ -30,7 +31,7 @@ class ProductsController extends Controller
     public function index()
     {
         return view('products.index', [
-            'products' =>Product::all(),
+            'products' => Product::all(),
             'userInput' => '<script>alert("hello")</script>'
         ]);
     }
@@ -51,20 +52,29 @@ class ProductsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(ProductFormRequest $request)
+    public function store(Request $request)
     {
-        $data=$request->validated();
 
         // POST
-        $product = new Product(); 
+        $product = new Product();
 
-        $product->name = $data['product-name'];
-        $product->category = $data['category'];
-        $product->year_posted = $data['year'];
+        $product->name = $request->name;
+        $product->feautures = $request->features;
+        $product->price = $request->price;
+        $product->location = $request->location;
+
+        if ($request->hasFile('image')) {
+            $path = $request->file('image')->storeAs(
+                'pimages',
+                $request->file('image')->getClientOriginalName(),
+                'public'
+            );
+        }
+        $product->image = $path;
 
         $product->save();
 
-        return redirect()->route('products.index');
+        return redirect()->route('home.index');
     }
 
     /**
@@ -74,13 +84,14 @@ class ProductsController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-     /*Search data in a given id*/
+    /*Search data in a given id*/
     public function show(Product $product)
     {
-        
+
+
         /*Get Data stored in a variable called products*/
-       
-        return view('products.show',[
+
+        return view('product', [
             'product' => $product /* 'product is the key or route parameter and provide data in $products then $index'*/
 
         ]);
@@ -95,7 +106,7 @@ class ProductsController extends Controller
     public function edit(Product $product)
     {
         //
-        return view('products.edit',[
+        return view('products.edit', [
             'product' => $product /* 'product is the key or route parameter and provide data in $products then $index'*/
 
         ]);
@@ -112,11 +123,11 @@ class ProductsController extends Controller
     {
         //POST
 
-        $data=$request->validated();
+        $data = $request->validated();
 
 
         //POST
-        
+
 
         $product->name = $data['product-name'];
         $product->category = $data['category'];
@@ -124,8 +135,7 @@ class ProductsController extends Controller
 
         $product->save();
 
-        return redirect()->route('products.show', $product->id);  
-
+        return redirect()->route('products.show', $product->id);
     }
 
     /**
